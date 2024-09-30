@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const colors = require('colors');
+const dotenv = require('dotenv')
 const Connection = require('./Db/Connection');
 const categoryRoutes = require('./Routes/categoryRouter');
 const instructorRoutes = require('./Routes/instructorRouter');
@@ -8,6 +9,7 @@ const courseRoutes = require('./Routes/courseRouter');
 
 
 const app = express();
+dotenv.config()
 
 // Middleware to parse JSON
 app.use(express.json());
